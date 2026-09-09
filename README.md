@@ -26,6 +26,8 @@ currently active GNOME appearance.
 ./apply-theme.sh light
 ```
 
+instead of script you can use ubuntu-tweak to change theme
+
 
 ## Reset appearance
 It reset GNOME appearance to Ubuntu defaults.
