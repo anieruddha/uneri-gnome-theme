@@ -1,0 +1,103 @@
+/* =========================================================================
+   Uneri — Widget Styling (GTK 4)
+   Non-Libadwaita GTK4 applications (Nautilus internals, GTK4 demo-style
+   apps, many third-party GTK4 apps that don't use AdwStyleManager
+   exclusively) read these rules directly. Libadwaita apps mostly rely
+   on the named-color bridge in colors.css instead — see
+   docs/COMPATIBILITY.md.
+   ========================================================================= */
+
+* {
+  outline-color: alpha(@uneri_focus, 0.55);
+  caret-color: @uneri_accent;
+}
+
+window {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+headerbar {
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+  border-bottom: 1px solid @headerbar_border_color;
+  box-shadow: none;
+}
+
+button {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 8px;
+  transition: background-color 120ms ease-out;
+}
+button:hover { background-color: @uneri_surface_hover; }
+button:active, button:checked { background-color: @uneri_surface_active; }
+button:disabled { color: @uneri_text_disabled; background-color: @uneri_surface; }
+
+button.suggested-action {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+  font-weight: 600;
+}
+button.suggested-action:hover { background-color: @uneri_accent_hover; }
+
+button.destructive-action {
+  background-color: transparent;
+  color: @destructive_color;
+  border-color: @destructive_color;
+}
+
+button.flat { background-color: transparent; border-color: transparent; }
+button.flat:hover { background-color: @uneri_surface_hover; }
+
+entry, text {
+  background-color: @view_bg_color;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 8px;
+}
+entry:focus-within { border-color: @uneri_focus; box-shadow: 0 0 0 2px alpha(@uneri_focus, 0.25); }
+
+switch {
+  background-color: @uneri_surface_active;
+  border-radius: 999px;
+  min-width: 38px;
+  min-height: 20px;
+}
+switch:checked { background-color: @accent_bg_color; }
+switch slider { border-radius: 50%; box-shadow: 0 1px 2px @uneri_shadow; }
+
+scale trough { background-color: @uneri_surface_active; border-radius: 999px; min-height: 5px; }
+scale highlight { background-color: @accent_bg_color; border-radius: 999px; }
+scale slider { border-radius: 50%; border: 2px solid @accent_bg_color; }
+
+scrollbar slider { background-color: alpha(@uneri_text_muted, 0.45); border-radius: 999px; }
+scrollbar slider:hover { background-color: alpha(@uneri_text_secondary, 0.6); }
+
+popover {
+  background-color: @popover_bg_color;
+  color: @popover_fg_color;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px @uneri_shadow;
+}
+
+row:hover { background-color: @uneri_surface_hover; }
+row:selected {
+  background-color: @uneri_surface_selected;
+  box-shadow: inset 2px 0 0 @accent_bg_color;
+}
+
+.card {
+  background-color: @card_bg_color;
+  color: @card_fg_color;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px @uneri_shadow;
+}
+
+.sidebar { background-color: @sidebar_bg_color; color: @sidebar_fg_color; }
+
+*:focus-visible {
+  outline-width: 2px;
+  outline-offset: 1px;
+}

@@ -1,0 +1,266 @@
+/* =========================================================================
+   Uneri — Widget Styling (GTK 3)
+   Uses only the semantic @uneri_* colors defined in colors.css so Dark and
+   Light stay structurally identical and only the palette changes.
+   ========================================================================= */
+
+* {
+  outline-color: alpha(@uneri_focus, 0.55);
+  -gtk-outline-radius: 6px;
+  caret-color: @uneri_accent;
+}
+
+window.background {
+  background-color: @uneri_background;
+  color: @uneri_text_primary;
+}
+
+decoration {
+  background-color: @uneri_background;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px @uneri_shadow;
+}
+decoration:backdrop {
+  box-shadow: 0 4px 12px @uneri_shadow;
+}
+
+/* ---------------------------------------------------------------------
+   Header bars / titlebars
+   --------------------------------------------------------------------- */
+headerbar {
+  background-color: @uneri_surface;
+  color: @uneri_text_primary;
+  border-bottom: 1px solid @uneri_border_subtle;
+  box-shadow: none;
+  padding: 0 6px;
+}
+headerbar .title { font-weight: 600; color: @uneri_text_primary; }
+headerbar .subtitle { color: @uneri_text_muted; font-size: 9px; }
+headerbar button { background-color: transparent; border-color: transparent; }
+headerbar button:hover { background-color: @uneri_surface_hover; }
+headerbar entry { background-color: @uneri_surface_elevated; }
+headerbar separator { background-color: @uneri_border_subtle; min-width: 1px; }
+
+/* ---------------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------------- */
+button {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 6px;
+  transition: background-color 120ms ease-out, border-color 120ms ease-out;
+}
+button:hover { background-color: @uneri_surface_hover; border-color: @uneri_border; }
+button:active, button:checked { background-color: @uneri_surface_active; }
+button:disabled { color: @uneri_text_disabled; background-color: @uneri_surface; border-color: @uneri_border_subtle; }
+button:focus { border-color: @uneri_focus; box-shadow: 0 0 0 2px alpha(@uneri_focus, 0.35); }
+
+button.suggested-action {
+  background-color: @uneri_accent;
+  color: @uneri_accent_text;
+  border-color: @uneri_accent_active;
+  font-weight: 600;
+}
+button.suggested-action:hover { background-color: @uneri_accent_hover; }
+button.suggested-action:active { background-color: @uneri_accent_active; }
+
+button.destructive-action {
+  background-color: transparent;
+  color: @uneri_error;
+  border-color: @uneri_error;
+}
+button.destructive-action:hover { background-color: alpha(@uneri_error, 0.12); }
+
+button.flat { background-color: transparent; border-color: transparent; }
+button.flat:hover { background-color: @uneri_surface_hover; }
+
+/* ---------------------------------------------------------------------
+   Entries / text input
+   --------------------------------------------------------------------- */
+entry {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 6px;
+}
+entry:focus { border-color: @uneri_focus; box-shadow: 0 0 0 2px alpha(@uneri_focus, 0.25); }
+entry:disabled { color: @uneri_text_disabled; background-color: @uneri_surface; }
+entry.error { border-color: @uneri_error; }
+entry.warning { border-color: @uneri_warning; }
+entry placeholder { color: @uneri_text_muted; }
+
+/* ---------------------------------------------------------------------
+   Checkboxes / radio buttons
+   --------------------------------------------------------------------- */
+checkbutton check, radiobutton radio {
+  background-color: @uneri_surface_elevated;
+  border: 1.5px solid @uneri_border;
+  min-width: 15px;
+  min-height: 15px;
+}
+checkbutton check { border-radius: 4px; }
+radiobutton radio { border-radius: 50%; }
+checkbutton check:checked, radiobutton radio:checked {
+  background-color: @uneri_accent;
+  border-color: @uneri_accent_active;
+  color: @uneri_accent_text;
+}
+checkbutton check:hover, radiobutton radio:hover { border-color: @uneri_accent; }
+checkbutton check:disabled, radiobutton radio:disabled {
+  background-color: @uneri_surface; border-color: @uneri_border_subtle;
+}
+
+/* ---------------------------------------------------------------------
+   Switches
+   --------------------------------------------------------------------- */
+switch {
+  background-color: @uneri_surface_active;
+  border: 1px solid @uneri_border;
+  border-radius: 999px;
+  min-width: 38px;
+  min-height: 20px;
+}
+switch:checked { background-color: @uneri_accent; border-color: @uneri_accent_active; }
+switch slider {
+  background-color: @uneri_text_primary;
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
+  box-shadow: 0 1px 2px @uneri_shadow;
+}
+switch:disabled { opacity: 0.5; }
+
+/* ---------------------------------------------------------------------
+   Sliders / scales
+   --------------------------------------------------------------------- */
+scale trough {
+  background-color: @uneri_surface_active;
+  border-radius: 999px;
+  min-height: 5px;
+}
+scale highlight { background-color: @uneri_accent; border-radius: 999px; }
+scale slider {
+  background-color: @uneri_surface_elevated;
+  border: 2px solid @uneri_accent;
+  border-radius: 50%;
+  min-width: 14px;
+  min-height: 14px;
+}
+scale slider:hover { border-color: @uneri_accent_hover; }
+
+/* ---------------------------------------------------------------------
+   Scrollbars
+   --------------------------------------------------------------------- */
+scrollbar { background-color: transparent; }
+scrollbar slider {
+  background-color: alpha(@uneri_text_muted, 0.45);
+  border-radius: 999px;
+  min-width: 8px;
+  min-height: 8px;
+}
+scrollbar slider:hover { background-color: alpha(@uneri_text_secondary, 0.6); }
+scrollbar slider:active { background-color: @uneri_accent; }
+
+/* ---------------------------------------------------------------------
+   Menus / popovers / context menus
+   --------------------------------------------------------------------- */
+menu, .menu, popover.background {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px @uneri_shadow;
+  padding: 6px;
+}
+menuitem, .menuitem, popover modelbutton {
+  border-radius: 6px;
+  color: @uneri_text_primary;
+}
+menuitem:hover, .menuitem:hover, popover modelbutton:hover {
+  background-color: @uneri_surface_hover;
+}
+menuitem:disabled { color: @uneri_text_disabled; }
+separator { background-color: @uneri_border_subtle; min-height: 1px; min-width: 1px; }
+
+/* ---------------------------------------------------------------------
+   Tooltips
+   --------------------------------------------------------------------- */
+tooltip {
+  background-color: @theme_tooltip_bg_color;
+  color: @theme_tooltip_fg_color;
+  border-radius: 6px;
+  border: 1px solid alpha(@uneri_border, 0.5);
+}
+
+/* ---------------------------------------------------------------------
+   Tabs / notebooks
+   --------------------------------------------------------------------- */
+notebook > header { background-color: @uneri_surface; border-color: @uneri_border_subtle; }
+notebook > header tab {
+  color: @uneri_text_muted;
+  border-bottom: 2px solid transparent;
+  padding: 6px 12px;
+}
+notebook > header tab:checked {
+  color: @uneri_text_primary;
+  border-bottom-color: @uneri_accent;
+}
+notebook > header tab:hover { color: @uneri_text_primary; }
+
+/* ---------------------------------------------------------------------
+   Lists / rows / selection states
+   --------------------------------------------------------------------- */
+list, .list { background-color: @uneri_surface; color: @uneri_text_primary; }
+row { padding: 4px 6px; }
+row:hover { background-color: @uneri_surface_hover; }
+row:selected {
+  background-color: @uneri_surface_selected;
+  color: @uneri_text_primary;
+  box-shadow: inset 2px 0 0 @uneri_accent;
+}
+row:disabled { color: @uneri_text_disabled; }
+
+/* ---------------------------------------------------------------------
+   Focus state (global, keyboard navigation)
+   --------------------------------------------------------------------- */
+*:focus-visible, *:focus {
+  outline-width: 2px;
+  outline-offset: 1px;
+  outline-color: alpha(@uneri_focus, 0.6);
+}
+
+/* ---------------------------------------------------------------------
+   Status colors — never rely on color alone; paired with icons/text
+   in-app. These provide consistent surfaces for status content.
+   --------------------------------------------------------------------- */
+.sf-success { color: @uneri_success; }
+.sf-warning { color: @uneri_warning; }
+.sf-error   { color: @uneri_error; }
+.sf-info    { color: @uneri_info; }
+
+infobar.info    { background-color: alpha(@uneri_info, 0.14);    border-color: @uneri_info; }
+infobar.warning { background-color: alpha(@uneri_warning, 0.14); border-color: @uneri_warning; }
+infobar.error   { background-color: alpha(@uneri_error, 0.14);   border-color: @uneri_error; }
+
+/* ---------------------------------------------------------------------
+   Progress bars
+   --------------------------------------------------------------------- */
+progressbar trough { background-color: @uneri_surface_active; border-radius: 999px; min-height: 6px; }
+progressbar progress { background-color: @uneri_accent; border-radius: 999px; }
+
+/* ---------------------------------------------------------------------
+   Dialogs
+   --------------------------------------------------------------------- */
+dialog, .dialog, messagedialog {
+  background-color: @uneri_surface;
+  color: @uneri_text_primary;
+}
+
+/* ---------------------------------------------------------------------
+   Sidebar (Nautilus-style split panes)
+   --------------------------------------------------------------------- */
+.sidebar, placessidebar {
+  background-color: @uneri_surface;
+  border-right: 1px solid @uneri_border_subtle;
+}

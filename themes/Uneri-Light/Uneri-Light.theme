@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Uneri-Light
+Comment=Uneri — soft cool-white surfaces and deep sky-blue accents (light variant)
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Uneri-Light
+MetacityTheme=Uneri-Light
+IconTheme=Uneri-Light
+CursorTheme=Adwaita
+ButtonLayout=close,minimize,maximize:menu

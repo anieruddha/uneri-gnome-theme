@@ -1,0 +1,75 @@
+/* =========================================================================
+   Uneri — Typography & Spacing Metrics (GTK 3)
+   Tuned specifically around Monaspace Neon's monospace geometry.
+   Monospace glyphs run visually wider than a typical UI sans, so type
+   sizes are pulled down slightly and horizontal padding is increased
+   to keep labels, buttons and menus from feeling cramped or oversized.
+   ========================================================================= */
+
+* {
+  font-family: "Monaspace Neon", "Monaspace Neon Var", monospace;
+  font-feature-settings: "calt" 1, "liga" 1;
+  -gtk-icon-shadow: none;
+}
+
+/* ---- Type scale --------------------------------------------------------
+   display        20px / 600  — rare, large empty-state headings
+   heading-lg      16px / 600  — dialog / window titles
+   heading         13.5px / 600 — section headers, headerbars
+   body            10.5px / 400 — normal UI text (monospace reads larger
+                                   than proportional fonts at the same
+                                   nominal size, so the base is reduced
+                                   from GNOME's usual 11px)
+   body-secondary  10.5px / 400 — secondary text, dimmed via color only
+   metadata        9px  / 400  — timestamps, counts, hints
+   small-label     8.5px / 400 — tag/badge text
+   ------------------------------------------------------------------------- */
+
+label.sf-display        { font-size: 20px; font-weight: 600; letter-spacing: -0.2px; }
+label.sf-heading-lg      { font-size: 16px; font-weight: 600; letter-spacing: -0.1px; }
+label.sf-heading         { font-size: 13.5px; font-weight: 600; }
+label.sf-metadata        { font-size: 9px; color: @uneri_text_muted; }
+label.sf-small           { font-size: 8.5px; color: @uneri_text_muted; letter-spacing: 0.2px; }
+
+window, .background {
+  font-size: 10.5px;
+  color: @uneri_text_primary;
+  background-color: @uneri_background;
+}
+
+headerbar {
+  font-size: 10.5px;
+  font-weight: 600;
+  min-height: 40px; /* +4px over stock GNOME to give Monaspace glyphs room */
+}
+
+menuitem, .menuitem, popover modelbutton {
+  font-size: 10.5px;
+  min-height: 26px; /* stock is ~22px; monospace labels need more room */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+button {
+  font-size: 10.5px;
+  min-height: 28px;
+  padding-left: 14px;   /* wider than stock 8px to offset monospace width */
+  padding-right: 14px;
+}
+
+entry {
+  font-size: 10.5px;
+  min-height: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+tooltip {
+  font-size: 9.5px;
+  padding: 6px 9px;
+}
+
+notification, .notification-banner {
+  font-size: 10px;
+  padding: 12px 14px;
+}

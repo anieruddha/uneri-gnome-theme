@@ -1,0 +1,69 @@
+/* =========================================================================
+   Uneri Light — Semantic Color System (GTK 4 / Libadwaita bridge)
+   Independently tuned, not an inversion of Uneri Dark.
+   ========================================================================= */
+
+@define-color uneri_background        #eef2f6;
+@define-color uneri_surface           #f5f8fb;
+@define-color uneri_surface_elevated  #ffffff;
+@define-color uneri_surface_hover     #e6ecf2;
+@define-color uneri_surface_active    #dbe4ee;
+@define-color uneri_surface_selected  #cfe6fa;
+
+@define-color uneri_text_primary      #1c232c;
+@define-color uneri_text_secondary    #454f5c;
+@define-color uneri_text_muted        #6b7686;
+@define-color uneri_text_disabled     #9aa4b2;
+
+@define-color uneri_accent            #1c78b8;
+@define-color uneri_accent_hover      #2f8ecb;
+@define-color uneri_accent_active     #145d90;
+@define-color uneri_accent_text       #ffffff;
+
+@define-color uneri_success           #1f9d6a;
+@define-color uneri_warning           #b3791a;
+@define-color uneri_error             #c9403f;
+@define-color uneri_info              #1c78b8;
+
+@define-color uneri_border            #ccd6e0;
+@define-color uneri_border_subtle     #dfe6ee;
+@define-color uneri_focus             #1c78b8;
+@define-color uneri_shadow            rgba(28, 35, 44, 0.12);
+
+/* ---- Libadwaita named-color bridge ------------------------------------ */
+@define-color accent_color         @uneri_accent;
+@define-color accent_bg_color      @uneri_accent;
+@define-color accent_fg_color      @uneri_accent_text;
+
+@define-color window_bg_color      @uneri_background;
+@define-color window_fg_color      @uneri_text_primary;
+@define-color view_bg_color        @uneri_surface_elevated;
+@define-color view_fg_color        @uneri_text_primary;
+
+@define-color headerbar_bg_color   @uneri_surface;
+@define-color headerbar_fg_color   @uneri_text_primary;
+@define-color headerbar_border_color @uneri_border_subtle;
+@define-color headerbar_backdrop_color @uneri_surface;
+@define-color headerbar_shade_color    rgba(0, 0, 0, 0.08);
+
+@define-color card_bg_color        @uneri_surface_elevated;
+@define-color card_fg_color        @uneri_text_primary;
+
+@define-color popover_bg_color     @uneri_surface_elevated;
+@define-color popover_fg_color     @uneri_text_primary;
+
+@define-color dialog_bg_color      @uneri_surface;
+@define-color dialog_fg_color      @uneri_text_primary;
+
+@define-color sidebar_bg_color     @uneri_surface;
+@define-color sidebar_fg_color     @uneri_text_primary;
+
+@define-color success_color        @uneri_success;
+@define-color warning_color        @uneri_warning;
+@define-color error_color          @uneri_error;
+@define-color destructive_color    @uneri_error;
+@define-color destructive_bg_color @uneri_error;
+@define-color destructive_fg_color #ffffff;
+
+@define-color borders              @uneri_border;
+@define-color unfocused_borders    @uneri_border_subtle;

@@ -1,0 +1,53 @@
+/* =========================================================================
+   Uneri Dark — Semantic Color System (GTK 3)
+   See docs/COLORS.md for the full specification and rationale.
+   ========================================================================= */
+
+@define-color uneri_background        #14171c;
+@define-color uneri_surface           #191d24;
+@define-color uneri_surface_elevated  #1f242c;
+@define-color uneri_surface_hover     #262c36;
+@define-color uneri_surface_active    #2c333f;
+@define-color uneri_surface_selected  #2a4258;
+
+@define-color uneri_text_primary      #e6eaf0;
+@define-color uneri_text_secondary    #aab3c2;
+@define-color uneri_text_muted        #7c8698;
+@define-color uneri_text_disabled     #565f6e;
+
+@define-color uneri_accent            #5ec2f2;
+@define-color uneri_accent_hover      #7ccdf5;
+@define-color uneri_accent_active     #3fa8db;
+@define-color uneri_accent_text       #06222f;
+
+@define-color uneri_success           #5fd6a5;
+@define-color uneri_warning           #e8b85f;
+@define-color uneri_error             #ef6a6a;
+@define-color uneri_info              #5ec2f2;
+
+@define-color uneri_border            #333b46;
+@define-color uneri_border_subtle     #262c36;
+@define-color uneri_focus             #5ec2f2;
+
+@define-color uneri_shadow            rgba(0, 0, 0, 0.35);
+@define-color uneri_scrim             rgba(10, 12, 16, 0.55);
+
+/* GTK named-color bridge so stock widgets and many apps that read the
+   standard palette (theme_fg_color, theme_selected_bg_color, etc.)
+   inherit Uneri automatically instead of falling back to Adwaita. */
+@define-color theme_bg_color              @uneri_surface;
+@define-color theme_fg_color              @uneri_text_primary;
+@define-color theme_base_color            @uneri_background;
+@define-color theme_text_color            @uneri_text_primary;
+@define-color theme_selected_bg_color     @uneri_accent;
+@define-color theme_selected_fg_color     @uneri_accent_text;
+@define-color theme_tooltip_bg_color      @uneri_surface_elevated;
+@define-color theme_tooltip_fg_color      @uneri_text_primary;
+@define-color insensitive_bg_color        @uneri_surface;
+@define-color insensitive_fg_color        @uneri_text_disabled;
+@define-color insensitive_base_color      @uneri_surface;
+@define-color borders                     @uneri_border;
+@define-color unfocused_borders           @uneri_border_subtle;
+@define-color warning_color               @uneri_warning;
+@define-color error_color                 @uneri_error;
+@define-color success_color               @uneri_success;

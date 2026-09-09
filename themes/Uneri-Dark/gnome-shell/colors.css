@@ -1,0 +1,27 @@
+/* Uneri Dark — GNOME Shell semantic colors (mirrors gtk-3.0/colors.css) */
+
+@define-color uneri_background        #14171c;
+@define-color uneri_surface           #191d24;
+@define-color uneri_surface_elevated  #1f242c;
+@define-color uneri_surface_hover     #262c36;
+@define-color uneri_surface_active    #2c333f;
+@define-color uneri_surface_selected  #2a4258;
+
+@define-color uneri_text_primary      #e6eaf0;
+@define-color uneri_text_secondary    #aab3c2;
+@define-color uneri_text_muted        #7c8698;
+@define-color uneri_text_disabled     #565f6e;
+
+@define-color uneri_accent            #5ec2f2;
+@define-color uneri_accent_hover      #7ccdf5;
+@define-color uneri_accent_active     #3fa8db;
+@define-color uneri_accent_text       #06222f;
+
+@define-color uneri_success           #5fd6a5;
+@define-color uneri_warning           #e8b85f;
+@define-color uneri_error             #ef6a6a;
+@define-color uneri_info              #5ec2f2;
+
+@define-color uneri_border            #333b46;
+@define-color uneri_border_subtle     #262c36;
+@define-color uneri_focus             #5ec2f2;

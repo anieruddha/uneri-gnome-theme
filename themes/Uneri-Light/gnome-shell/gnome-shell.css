@@ -1,0 +1,275 @@
+/* =========================================================================
+   Uneri — GNOME Shell Theme
+   Structure is shared between Dark and Light; only colors.css differs.
+   ========================================================================= */
+
+@import url("colors.css");
+
+* {
+  font-family: "Monaspace Neon", "Monaspace Neon Var", sans-serif;
+  color: @uneri_text_primary;
+}
+
+stage {
+  font-family: "Monaspace Neon", "Monaspace Neon Var", sans-serif;
+  font-size: 10.5pt;
+}
+
+/* ---------------------------------------------------------------------
+   Top bar
+   --------------------------------------------------------------------- */
+#panel {
+  background-color: @uneri_surface;
+  border-bottom: 1px solid @uneri_border_subtle;
+  font-weight: 600;
+  height: 30px;
+}
+#panel .panel-button {
+  color: @uneri_text_secondary;
+  -natural-hpadding: 12px;
+  transition-duration: 120ms;
+}
+#panel .panel-button:hover { color: @uneri_text_primary; background-color: @uneri_surface_hover; }
+#panel .panel-button:active,
+#panel .panel-button:checked,
+#panel .panel-button:focus { color: @uneri_text_primary; background-color: @uneri_surface_active; }
+#panel .panel-button.clock-display { font-weight: 600; }
+#panel .system-status-icon { icon-size: 16px; padding: 0 4px; color: @uneri_text_secondary; }
+#panel .panel-button:hover .system-status-icon { color: @uneri_accent; }
+
+/* Activities corner */
+#panel #activities { font-weight: 600; color: @uneri_text_secondary; }
+#panel #activities:hover { color: @uneri_text_primary; }
+
+/* ---------------------------------------------------------------------
+   Overview / Activities
+   --------------------------------------------------------------------- */
+#overview { spacing: 24px; }
+.overview-controls { spacing: 16px; }
+.workspace-background {
+  background-color: @uneri_background;
+  border-radius: 14px;
+}
+.window-picker { padding: 24px; spacing: 24px; }
+.window-clone-border { border: 2px solid @uneri_border; border-radius: 10px; }
+
+.search-entry {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 999px;
+  padding: 8px 16px;
+  width: 420px;
+  transition-duration: 120ms;
+}
+.search-entry:focus { border-color: @uneri_focus; box-shadow: 0 0 0 2px alpha(@uneri_focus, 0.25); }
+
+/* ---------------------------------------------------------------------
+   Dash (kept as the default Ubuntu Dock; only shared surfaces styled)
+   --------------------------------------------------------------------- */
+#dash {
+  background-color: alpha(@uneri_surface, 0.92);
+  border: 1px solid @uneri_border_subtle;
+  border-radius: 16px;
+  padding: 6px;
+}
+#dash .app-well-app .overview-icon { transition-duration: 120ms; }
+#dash .app-well-app:hover .overview-icon { background-color: @uneri_surface_hover; border-radius: 12px; }
+#dash .app-well-app.running .app-well-app-running-dot {
+  background-color: @uneri_accent;
+  width: 5px; height: 5px;
+  border-radius: 999px;
+}
+
+/* ---------------------------------------------------------------------
+   Application grid
+   --------------------------------------------------------------------- */
+.app-grid { spacing: 18px; }
+.icon-grid-item .overview-icon { transition-duration: 120ms; }
+.icon-grid-item:hover .overview-icon,
+.icon-grid-item:focus .overview-icon { background-color: @uneri_surface_hover; border-radius: 16px; }
+.app-view-controls { spacing: 8px; }
+.app-view-control { background-color: @uneri_surface_elevated; border: 1px solid @uneri_border; color: @uneri_text_secondary; }
+.app-view-control:checked { background-color: @uneri_accent; color: @uneri_accent_text; border-color: @uneri_accent_active; }
+.app-folder-icon { background-color: @uneri_surface_elevated; border: 1px solid @uneri_border; border-radius: 18px; }
+
+/* ---------------------------------------------------------------------
+   Workspace switcher
+   --------------------------------------------------------------------- */
+.workspace-thumbnails { spacing: 10px; padding: 8px; }
+.workspace-thumbnail {
+  border: 2px solid @uneri_border_subtle;
+  border-radius: 8px;
+  background-color: @uneri_surface;
+}
+.workspace-thumbnail-indicator { border: 2px solid @uneri_accent; border-radius: 8px; }
+
+/* ---------------------------------------------------------------------
+   Quick settings / system menu / calendar popovers
+   --------------------------------------------------------------------- */
+.quick-settings, .quick-settings-menu, #calendarArea, .message-list {
+  background-color: @uneri_surface_elevated;
+}
+.quick-toggle-menu,
+.quick-settings-system-item,
+.popup-menu-content {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  padding: 10px;
+}
+
+.quick-toggle {
+  background-color: @uneri_surface_active;
+  color: @uneri_text_primary;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+.quick-toggle:hover { background-color: @uneri_surface_hover; }
+.quick-toggle:checked {
+  background-color: @uneri_accent;
+  color: @uneri_accent_text;
+}
+.quick-toggle:checked:hover { background-color: @uneri_accent_hover; }
+
+.quick-slider { color: @uneri_accent; }
+.quick-slider .slider { color: @uneri_accent; -barlevel-active-background-color: @uneri_accent; }
+
+.popup-menu-item {
+  color: @uneri_text_primary;
+  border-radius: 8px;
+  spacing: 10px;
+  padding: 8px 10px;
+}
+.popup-menu-item:hover,
+.popup-menu-item:focus { background-color: @uneri_surface_hover; }
+.popup-menu-item:active,
+.popup-menu-item:checked { background-color: @uneri_surface_active; }
+.popup-menu-item .popup-menu-ornament { color: @uneri_accent; }
+.popup-separator-menu-item .popup-separator-menu-item-separator { background-color: @uneri_border_subtle; }
+
+/* ---------------------------------------------------------------------
+   Calendar
+   --------------------------------------------------------------------- */
+.calendar { padding: 10px; }
+.calendar-month-label { color: @uneri_text_primary; font-weight: 600; }
+.calendar-day-base {
+  color: @uneri_text_secondary;
+  border-radius: 999px;
+  width: 26px; height: 26px;
+}
+.calendar-day-base:hover { background-color: @uneri_surface_hover; }
+.calendar-day-base.calendar-today {
+  background-color: @uneri_accent;
+  color: @uneri_accent_text;
+  font-weight: 600;
+}
+.calendar-day-base.calendar-other-month-day { color: @uneri_text_disabled; }
+.calendar-day-base.calendar-week-number { color: @uneri_text_muted; }
+.events-button .events-list-key { color: @uneri_accent; }
+
+/* ---------------------------------------------------------------------
+   Notifications
+   --------------------------------------------------------------------- */
+.notification-banner, .notification {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 14px;
+  padding: 12px;
+  spacing: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.30);
+}
+.notification-banner .notification-icon { icon-size: 32px; }
+.notification-banner .notification-title { font-weight: 600; color: @uneri_text_primary; }
+.notification-banner .notification-body { color: @uneri_text_secondary; }
+.notification-banner:hover { background-color: @uneri_surface_hover; }
+.notification-button {
+  background-color: @uneri_surface_active;
+  border-radius: 8px;
+  color: @uneri_text_primary;
+}
+.notification-button:hover { background-color: @uneri_surface_hover; }
+
+/* ---------------------------------------------------------------------
+   Search results / lists inside popovers
+   --------------------------------------------------------------------- */
+.list-search-result, .search-section-content { spacing: 6px; }
+.search-provider-icon, .list-search-result-content { color: @uneri_text_primary; }
+
+/* ---------------------------------------------------------------------
+   Dialogs / modal system (e.g. logout / restart)
+   --------------------------------------------------------------------- */
+.modal-dialog {
+  background-color: @uneri_surface_elevated;
+  border: 1px solid @uneri_border;
+  border-radius: 16px;
+  color: @uneri_text_primary;
+}
+.modal-dialog-button-box .button {
+  background-color: @uneri_surface_active;
+  color: @uneri_text_primary;
+  border-radius: 8px;
+}
+.modal-dialog-button-box .button:hover { background-color: @uneri_surface_hover; }
+.modal-dialog-button-box .button.default {
+  background-color: @uneri_accent;
+  color: @uneri_accent_text;
+}
+.modal-dialog-button-box .button.default:hover { background-color: @uneri_accent_hover; }
+
+/* ---------------------------------------------------------------------
+   OSD (volume/brightness on-screen displays)
+   --------------------------------------------------------------------- */
+.osd-window {
+  background-color: alpha(@uneri_surface_elevated, 0.92);
+  border: 1px solid @uneri_border;
+  border-radius: 16px;
+  color: @uneri_text_primary;
+}
+.osd-window .level { -barlevel-active-background-color: @uneri_accent; -barlevel-background-color: @uneri_surface_active; }
+
+/* ---------------------------------------------------------------------
+   Tooltips
+   --------------------------------------------------------------------- */
+.tooltip, .switcher-list .tooltip {
+  background-color: @uneri_surface_elevated;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+  border-radius: 6px;
+  padding: 6px 9px;
+}
+
+/* ---------------------------------------------------------------------
+   Login/lock-adjacent shell chrome we DO control (not GDM itself) —
+   the Alt-Tab switcher and screen-shield clock, which are part of the
+   running session, not the login manager.
+   --------------------------------------------------------------------- */
+.switcher-list {
+  background-color: @uneri_surface_elevated;
+  border: 1px solid @uneri_border;
+  border-radius: 14px;
+}
+.switcher-list .item-box:selected { background-color: @uneri_surface_selected; border-radius: 10px; }
+
+/* ---------------------------------------------------------------------
+   Looking Glass (developer console) — minimal, functional styling only
+   --------------------------------------------------------------------- */
+#LookingGlassDialog {
+  background-color: @uneri_background;
+  color: @uneri_text_primary;
+  border: 1px solid @uneri_border;
+}
+#LookingGlassDialog StScrollView, #LookingGlassDialog .shell-link {
+  color: @uneri_accent;
+}
+
+/* ---------------------------------------------------------------------
+   Status / feedback colors — paired with icon or label text elsewhere,
+   never the sole indicator.
+   --------------------------------------------------------------------- */
+.sf-success { color: @uneri_success; }
+.sf-warning { color: @uneri_warning; }
+.sf-error   { color: @uneri_error; }

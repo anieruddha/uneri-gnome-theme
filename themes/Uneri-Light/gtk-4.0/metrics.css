@@ -1,0 +1,46 @@
+/* =========================================================================
+   Uneri — Typography & Spacing Metrics (GTK 4)
+   Mirrors gtk-3.0/metrics.css. Libadwaita widgets read fewer of these
+   sizing rules directly (see docs/COMPATIBILITY.md), but non-Adwaita
+   GTK4 apps and windows still honor them.
+   ========================================================================= */
+
+* {
+  font-family: "Monaspace Neon", "Monaspace Neon Var", monospace;
+  font-feature-settings: "calt" 1, "liga" 1;
+}
+
+window {
+  font-size: 10.5px;
+  color: @uneri_text_primary;
+  background-color: @uneri_background;
+}
+
+headerbar {
+  font-size: 10.5px;
+  font-weight: 600;
+  min-height: 40px;
+}
+
+button {
+  font-size: 10.5px;
+  min-height: 28px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+entry, text {
+  font-size: 10.5px;
+  min-height: 28px;
+}
+
+popover .menu button,
+popover modelbutton {
+  font-size: 10.5px;
+  min-height: 26px;
+}
+
+tooltip {
+  font-size: 9.5px;
+  padding: 6px 9px;
+}
