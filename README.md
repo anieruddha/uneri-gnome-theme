@@ -1,6 +1,6 @@
 # Uneri
 
-A ubuntu theme I wrote (with AI help) for my laptop. Generate & create few icons. For rest of icon fallback to system default 
+A ubuntu theme I wrote (use AI assistant) for my laptop. Generate & create few icons. For rest of icon fallback to system default 
 
 ## Install
 ```

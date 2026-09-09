@@ -113,7 +113,7 @@ Type=Scalable
 Context=Status
 """.format(VARIANT)
 
-    index_file = "{0}/index.theme".format(ICON_THEME_PATH)
+    index_file = "{0}/icons/index.theme".format(ICON_THEME_PATH)
     with open(index_file, "w", encoding="utf-8") as file:
         file.write(content)
     print(f"Generated: {index_file}")

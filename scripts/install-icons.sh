@@ -28,10 +28,8 @@ case "${VARIANT}" in
     ;;
 esac
 
-SOURCE_DIR="${SCRIPT_DIR}/icons/${ICON_THEME_NAME}"
+SOURCE_DIR="${SCRIPT_DIR}/icons/${ICON_THEME_NAME}/icons"
 TARGET_DIR="${UNERI_ICONS_DIR}/${ICON_THEME_NAME}"
-
-uneri_log "${SOURCE_DIR} \n ${TARGET_DIR}"
 
 if [[ ! -d "${SOURCE_DIR}" ]]; then
   uneri_log "${ICON_THEME_NAME} icons do not exist — generating them."
