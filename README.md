@@ -1,6 +1,7 @@
 # Uneri
 
-A ubuntu theme I wrote (use AI assistant) for my laptop. Generate & create few icons. For rest of icon fallback to system default 
+A ubuntu theme I wrote (with help from AI assistant) specifically for my laptop. It generate some svg icons, copied that to `<Home>/.local/share/icons`. Themes copied to `<Home>/.local/share/themes`
+For icon not available, it fallback to system default.
 
 ## Install
 ```
@@ -18,16 +19,12 @@ untouched.
 
 ## Apply / Switch between Dark and Light
 
-The theme and icon installers install files only. They do not change the
-currently active GNOME appearance.
+apply-theme.sh switch between dark & light theme. Instead of script you can use ubuntu-tweak to change theme
 
 ```
 ./apply-theme.sh dark
 ./apply-theme.sh light
 ```
-
-instead of script you can use ubuntu-tweak to change theme
-
 
 ## Reset appearance
 It reset GNOME appearance to Ubuntu defaults.
