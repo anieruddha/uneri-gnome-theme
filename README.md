@@ -1,7 +1,10 @@
 # Uneri
 
-A ubuntu theme I wrote (with help from AI assistant) specifically for my laptop. It generate some svg icons, copied that to `<Home>/.local/share/icons`. Themes copied to `<Home>/.local/share/themes`
-For icon not available, it fallback to system default.
+I wrote this ubuntu theme for for my laptop. 
+icons copied that to `<Home>/.local/share/icons`. 
+Themes copied to `<Home>/.local/share/themes`
+
+This is not complete icon set, doesnt cover all icons for other icon it fallback to system default.
 
 ## Install
 ```
