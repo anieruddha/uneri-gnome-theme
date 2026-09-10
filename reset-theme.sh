@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 # Uneri appearance reset.
 # Resets the active GNOME appearance to Ubuntu defaults.
-# This script does NOT remove any files, themes, icons or fonts.
-# Never touches: wallpaper, terminal configuration, GDM/login screen,
-# GRUB/Plymouth/boot configuration, or personal files.
-#
 # Usage:
 #   ./reset-theme.sh
 

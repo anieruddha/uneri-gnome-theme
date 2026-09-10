@@ -1,10 +1,6 @@
 /* =========================================================================
    Uneri — Widget Styling (GTK 4)
-   Non-Libadwaita GTK4 applications (Nautilus internals, GTK4 demo-style
-   apps, many third-party GTK4 apps that don't use AdwStyleManager
-   exclusively) read these rules directly. Libadwaita apps mostly rely
-   on the named-color bridge in colors.css instead — see
-   docs/COMPATIBILITY.md.
+   Non-Libadwaita GTK4 applications read these rules directly.
    ========================================================================= */
 
 * {

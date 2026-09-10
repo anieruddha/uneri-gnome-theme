@@ -1,9 +1,5 @@
 /* =========================================================================
    Uneri Dark — Semantic Color System (GTK 4 / Libadwaita bridge)
-   Libadwaita intentionally limits deep re-theming of its apps, but it
-   does read a documented set of named colors. Overriding those here is
-   the supported mechanism (rather than fighting Libadwaita internals)
-   — see docs/COMPATIBILITY.md for what this can and can't reach.
    ========================================================================= */
 
 @define-color uneri_background        #14171c;

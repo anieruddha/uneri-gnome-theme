@@ -9,7 +9,6 @@
 #   ./install.sh --variant dark
 #   ./install.sh --variant light
 #
-# Without --variant, both Dark and Light variants are installed.
 
 set -euo pipefail
 

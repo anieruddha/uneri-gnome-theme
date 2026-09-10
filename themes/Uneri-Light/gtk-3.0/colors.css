@@ -1,7 +1,6 @@
 /* =========================================================================
    Uneri Light — Semantic Color System (GTK 3)
    Independently tuned, not an inversion of Uneri Dark.
-   See docs/COLORS.md for the full specification and rationale.
    ========================================================================= */
 
 @define-color uneri_background        #eef2f6;

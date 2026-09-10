@@ -4,10 +4,6 @@
 # Usage:
 #   ./apply-theme.sh dark
 #   ./apply-theme.sh light
-#
-# Applies gsettings changes only — no daemon, no background process.
-# GNOME Shell theming additionally requires the 'User Themes' extension;
-# if it's installed and enabled this script updates it too.
 
 set -euo pipefail
 

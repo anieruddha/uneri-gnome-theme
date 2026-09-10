@@ -1,8 +1,6 @@
 /* =========================================================================
    Uneri — Typography & Spacing Metrics (GTK 4)
-   Mirrors gtk-3.0/metrics.css. Libadwaita widgets read fewer of these
-   sizing rules directly (see docs/COMPATIBILITY.md), but non-Adwaita
-   GTK4 apps and windows still honor them.
+   Mirrors gtk-3.0/metrics.css.
    ========================================================================= */
 
 * {
