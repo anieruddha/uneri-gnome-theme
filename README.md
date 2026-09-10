@@ -61,3 +61,12 @@ Monaspace Neon is installed into:
 ~/.local/share/fonts/Monaspace
 ```
 
+## Screenshots
+
+#### Dark Theme
+
+![Dark Theme](./screenshots/dark-theme.png?raw=true "Dark Theme Image")
+
+#### Light Theme
+
+![Light Theme](./screenshots/light-theme.png?raw=true "Dark Theme Image")
