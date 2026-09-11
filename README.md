@@ -65,8 +65,10 @@ Monaspace Neon is installed into:
 
 #### Dark Theme
 
-![Dark Theme](./screenshots/dark-theme.png?raw=true "Dark Theme Image")
+![GTK 3 Widgets](./screenshots/gtk3-dark.png?raw=true "Uneri Dark Theme GTK 3")
+![GTK 4 Widgets](./screenshots/gtk4-dark.png?raw=true "Uneri Dark Theme GTK 4")
 
 #### Light Theme
 
-![Light Theme](./screenshots/light-theme.png?raw=true "Dark Theme Image")
+![GTK 3 Widgets](./screenshots/gtk3-light.png?raw=true "Uneri Light Theme GTK 3")
+![GTK 4 Widgets](./screenshots/gtk4-light.png?raw=true "Uneri Light Theme GTK 4")
