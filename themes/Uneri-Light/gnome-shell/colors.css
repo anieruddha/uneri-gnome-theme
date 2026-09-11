@@ -1,27 +1,28 @@
-/* Uneri Light — GNOME Shell semantic colors (mirrors gtk-3.0/colors.css) */
+/* Uneri Light — GNOME Shell semantic colors (mirrors gtk-3.0/colors.css)
+   Warm cream/teal palette, matching scripts/common.py's icon palette. */
 
-@define-color uneri_background        #eef2f6;
-@define-color uneri_surface           #f5f8fb;
+@define-color uneri_background        #fdf6ea;
+@define-color uneri_surface           #f8e1c0;
 @define-color uneri_surface_elevated  #ffffff;
-@define-color uneri_surface_hover     #e6ecf2;
-@define-color uneri_surface_active    #dbe4ee;
-@define-color uneri_surface_selected  #cfe6fa;
+@define-color uneri_surface_hover     #f3d9b0;
+@define-color uneri_surface_active    #ead0a8;
+@define-color uneri_surface_selected  #d8e6e2;
 
-@define-color uneri_text_primary      #1c232c;
-@define-color uneri_text_secondary    #454f5c;
-@define-color uneri_text_muted        #6b7686;
-@define-color uneri_text_disabled     #9aa4b2;
+@define-color uneri_text_primary      #3a2f26;
+@define-color uneri_text_secondary    #574a3d;
+@define-color uneri_text_muted        #7c7a72;
+@define-color uneri_text_disabled     #b0a89a;
 
-@define-color uneri_accent            #1c78b8;
-@define-color uneri_accent_hover      #2f8ecb;
-@define-color uneri_accent_active     #145d90;
+@define-color uneri_accent            #287fa3;
+@define-color uneri_accent_hover      #3a92b8;
+@define-color uneri_accent_active     #1c6486;
 @define-color uneri_accent_text       #ffffff;
 
-@define-color uneri_success           #1f9d6a;
-@define-color uneri_warning           #b3791a;
-@define-color uneri_error             #c9403f;
-@define-color uneri_info              #1c78b8;
+@define-color uneri_success           #4ca982;
+@define-color uneri_warning           #d99b3d;
+@define-color uneri_error             #d85c5c;
+@define-color uneri_info              #6f9696;
 
-@define-color uneri_border            #ccd6e0;
-@define-color uneri_border_subtle     #dfe6ee;
-@define-color uneri_focus             #1c78b8;
+@define-color uneri_border            #e0cfa9;
+@define-color uneri_border_subtle     #eddfc0;
+@define-color uneri_focus             #287fa3;
