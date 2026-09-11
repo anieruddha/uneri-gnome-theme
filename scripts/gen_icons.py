@@ -408,19 +408,52 @@ print("done")
 # ---------------------------------------------------------------------------
 
 def symbolic(body):
-    return svg(f'<g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">\n{body}\n</g>', vb=16)
+    # GTK's symbolic-icon pipeline only reliably renders filled shapes,
+    # not stroke-based line art (confirmed empirically — stroke, with
+    # either currentColor or a literal color, renders blank; fill works).
+    # #2e3436 is a conventional placeholder — GTK recolors symbolic
+    # icons based on their alpha shape, not this literal fill value.
+    return svg(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="#2e3436">\n{body}\n</g></svg>', vb=16)
 
-write("symbolic/actions/open-menu-symbolic.svg", symbolic('<path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/>'))
-write("symbolic/actions/list-add-symbolic.svg", symbolic('<path d="M8 3v10M3 8h10"/>'))
-write("symbolic/actions/list-remove-symbolic.svg", symbolic('<path d="M3 8h10"/>'))
-write("symbolic/actions/edit-find-symbolic.svg", symbolic('<circle cx="6.8" cy="6.8" r="3.6" fill="none"/><path d="M11.2 11.2l2.6 2.6"/>'))
-write("symbolic/actions/window-close-symbolic.svg", symbolic('<path d="M4 4l8 8M12 4l-8 8"/>'))
-write("symbolic/actions/view-more-symbolic.svg", symbolic('<circle cx="3.2" cy="8" r="1.1" fill="currentColor" stroke="none"/><circle cx="8" cy="8" r="1.1" fill="currentColor" stroke="none"/><circle cx="12.8" cy="8" r="1.1" fill="currentColor" stroke="none"/>'))
-write("symbolic/actions/pan-down-symbolic.svg", symbolic('<path d="M4 6l4 4 4-4"/>'))
-write("symbolic/actions/pan-up-symbolic.svg", symbolic('<path d="M4 10l4-4 4 4"/>'))
-write("symbolic/status/emblem-ok-symbolic.svg", symbolic('<path d="M3.5 8.3l3 3 6-6.6"/>'))
-write("symbolic/status/dialog-warning-symbolic.svg", symbolic('<path d="M8 2.5L14.5 13.5h-13z"/><path d="M8 6.5v3.4M8 12v.1"/>'))
-write("symbolic/actions/document-save-symbolic.svg", symbolic('<path d="M3 3h7l3 3v7a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M5.5 3v3.5h5V3"/>'))
+write("symbolic/actions/open-menu-symbolic.svg", symbolic('''
+<rect x="2.5" y="3.75" width="11" height="1.5" rx="0.75"/>
+<rect x="2.5" y="7.25" width="11" height="1.5" rx="0.75"/>
+<rect x="2.5" y="10.75" width="11" height="1.5" rx="0.75"/>
+'''))
+write("symbolic/actions/list-add-symbolic.svg", symbolic('''
+<rect x="7.25" y="2.5" width="1.5" height="11" rx="0.75"/>
+<rect x="2.5" y="7.25" width="11" height="1.5" rx="0.75"/>
+'''))
+write("symbolic/actions/list-remove-symbolic.svg", symbolic('''
+<rect x="2.5" y="7.25" width="11" height="1.5" rx="0.75"/>
+'''))
+write("symbolic/actions/edit-find-symbolic.svg", symbolic('''
+<path fill-rule="evenodd" d="M6.8 3.4a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zm0 1.5a1.9 1.9 0 110 3.8 1.9 1.9 0 010-3.8z"/>
+<rect x="8.8" y="10.55" width="5" height="1.5" rx="0.75" transform="rotate(45 11.3 11.3)"/>
+'''))
+write("symbolic/actions/window-close-symbolic.svg", symbolic('''
+<rect x="2.35" y="7.25" width="11.3" height="1.5" rx="0.75" transform="rotate(45 8 8)"/>
+<rect x="2.35" y="7.25" width="11.3" height="1.5" rx="0.75" transform="rotate(-45 8 8)"/>
+'''))
+write("symbolic/actions/view-more-symbolic.svg", symbolic('''
+<circle cx="3.2" cy="8" r="1.1"/>
+<circle cx="8" cy="8" r="1.1"/>
+<circle cx="12.8" cy="8" r="1.1"/>
+'''))
+write("symbolic/actions/pan-down-symbolic.svg", symbolic('<path d="M4 6.5h8L8 11z"/>'))
+write("symbolic/actions/pan-up-symbolic.svg", symbolic('<path d="M4 9.5h8L8 5z"/>'))
+write("symbolic/status/emblem-ok-symbolic.svg", symbolic('<polygon points="2.3,8.6 3.8,7.1 6.2,9.5 12.2,3.5 13.7,5 6.2,12.5"/>'))
+write("symbolic/status/dialog-warning-symbolic.svg", symbolic('''
+<path d="M8 2.2L14.8 13.8H1.2z"/>
+<rect x="7.25" y="6.2" width="1.5" height="4" rx="0.75" fill="#ffffff"/>
+<circle cx="8" cy="11.6" r="0.9" fill="#ffffff"/>
+'''))
+write("symbolic/actions/document-save-symbolic.svg", symbolic('''
+<path d="M3 2h7.6l3.4 3.4V13a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1z"/>
+<rect x="5" y="8.6" width="6" height="4.4" fill-opacity="0.35"/>
+<rect x="5" y="3" width="4.5" height="3" fill-opacity="0.35"/>
+</g>
+'''))
 
 generate_index_theme()
 
