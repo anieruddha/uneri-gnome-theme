@@ -39,12 +39,12 @@ window, .background {
 headerbar {
   font-size: 10.5px;
   font-weight: 600;
-  min-height: 40px; /* +4px over stock GNOME to give Monaspace glyphs room */
+  min-height: 40px;
 }
 
 menuitem, .menuitem, popover modelbutton {
   font-size: 10.5px;
-  min-height: 26px; /* stock is ~22px; monospace labels need more room */
+  min-height: 26px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -52,7 +52,7 @@ menuitem, .menuitem, popover modelbutton {
 button {
   font-size: 10.5px;
   min-height: 28px;
-  padding-left: 14px;   /* wider than stock 8px to offset monospace width */
+  padding-left: 14px;
   padding-right: 14px;
 }
 

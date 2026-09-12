@@ -62,7 +62,7 @@ stage {
   width: 420px;
   transition-duration: 120ms;
 }
-.search-entry:focus { border-color: @uneri_focus; box-shadow: 0 0 0 2px alpha(@uneri_focus, 0.25); }
+.search-entry:focus { border-color: @uneri_focus; }
 
 /* ---------------------------------------------------------------------
    Dash (kept as the default Ubuntu Dock; only shared surfaces styled)
